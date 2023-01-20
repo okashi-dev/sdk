@@ -1,4 +1,15 @@
 {
-  "name": "sdk",
-  "type": "module"
+  "name": "@usesoroban/sdk",
+  "version": "0.1.0",
+  "description": "Soroban JavaScript SDK.",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Morgan Wilde"
+  },
+  "type": "module",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/useSoroban/sdk"
+  }
 }
