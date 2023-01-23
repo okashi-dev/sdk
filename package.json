@@ -1,6 +1,6 @@
 {
   "name": "@usesoroban/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Soroban JavaScript SDK.",
   "license": "Apache-2.0",
   "author": {
@@ -11,5 +11,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/useSoroban/sdk"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "js-xdr": "^1.3.0",
+    "tweetnacl": "^1.0.3"
   }
 }
