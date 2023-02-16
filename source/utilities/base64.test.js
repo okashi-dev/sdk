@@ -1,3 +1,7 @@
+/**
+ * @jest-environment node
+ */
+
 import * as base64 from './base64.js';
 
 describe('Base64 coding', () => {
