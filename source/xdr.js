@@ -1,4 +1,4 @@
-// Automatically generated on 2023-02-17T00:20:15+02:00
+// Automatically generated on 2023-02-17T00:32:57+02:00
 // DO NOT EDIT or your changes may be overwritten
 
 /* jshint maxstatements:2147483647  */
@@ -540,7 +540,7 @@ xdr.union("ScSpecTypeDef", {
 //
 // ===========================================================================
 xdr.struct("ScSpecUdtStructFieldV0", [
-  ["doc", xdr.string(SC_SPEC_DOC_LIMIT)],
+  ["doc", xdr.string(xdr.lookup("SC_SPEC_DOC_LIMIT"))],
   ["name", xdr.string(30)],
   ["type", xdr.lookup("ScSpecTypeDef")],
 ]);
@@ -557,7 +557,7 @@ xdr.struct("ScSpecUdtStructFieldV0", [
 //
 // ===========================================================================
 xdr.struct("ScSpecUdtStructV0", [
-  ["doc", xdr.string(SC_SPEC_DOC_LIMIT)],
+  ["doc", xdr.string(xdr.lookup("SC_SPEC_DOC_LIMIT"))],
   ["lib", xdr.string(80)],
   ["name", xdr.string(60)],
   ["fields", xdr.varArray(xdr.lookup("ScSpecUdtStructFieldV0"), 40)],
@@ -573,7 +573,7 @@ xdr.struct("ScSpecUdtStructV0", [
 //
 // ===========================================================================
 xdr.struct("ScSpecUdtUnionCaseVoidV0", [
-  ["doc", xdr.string(SC_SPEC_DOC_LIMIT)],
+  ["doc", xdr.string(xdr.lookup("SC_SPEC_DOC_LIMIT"))],
   ["name", xdr.string(60)],
 ]);
 
@@ -588,7 +588,7 @@ xdr.struct("ScSpecUdtUnionCaseVoidV0", [
 //
 // ===========================================================================
 xdr.struct("ScSpecUdtUnionCaseTupleV0", [
-  ["doc", xdr.string(SC_SPEC_DOC_LIMIT)],
+  ["doc", xdr.string(xdr.lookup("SC_SPEC_DOC_LIMIT"))],
   ["name", xdr.string(60)],
   ["type", xdr.varArray(xdr.lookup("ScSpecTypeDef"), 12)],
 ]);
@@ -643,7 +643,7 @@ xdr.union("ScSpecUdtUnionCaseV0", {
 //
 // ===========================================================================
 xdr.struct("ScSpecUdtUnionV0", [
-  ["doc", xdr.string(SC_SPEC_DOC_LIMIT)],
+  ["doc", xdr.string(xdr.lookup("SC_SPEC_DOC_LIMIT"))],
   ["lib", xdr.string(80)],
   ["name", xdr.string(60)],
   ["cases", xdr.varArray(xdr.lookup("ScSpecUdtUnionCaseV0"), 50)],
@@ -660,7 +660,7 @@ xdr.struct("ScSpecUdtUnionV0", [
 //
 // ===========================================================================
 xdr.struct("ScSpecUdtEnumCaseV0", [
-  ["doc", xdr.string(SC_SPEC_DOC_LIMIT)],
+  ["doc", xdr.string(xdr.lookup("SC_SPEC_DOC_LIMIT"))],
   ["name", xdr.string(60)],
   ["value", xdr.lookup("Uint32")],
 ]);
@@ -677,7 +677,7 @@ xdr.struct("ScSpecUdtEnumCaseV0", [
 //
 // ===========================================================================
 xdr.struct("ScSpecUdtEnumV0", [
-  ["doc", xdr.string(SC_SPEC_DOC_LIMIT)],
+  ["doc", xdr.string(xdr.lookup("SC_SPEC_DOC_LIMIT"))],
   ["lib", xdr.string(80)],
   ["name", xdr.string(60)],
   ["cases", xdr.varArray(xdr.lookup("ScSpecUdtEnumCaseV0"), 50)],
@@ -694,7 +694,7 @@ xdr.struct("ScSpecUdtEnumV0", [
 //
 // ===========================================================================
 xdr.struct("ScSpecUdtErrorEnumCaseV0", [
-  ["doc", xdr.string(SC_SPEC_DOC_LIMIT)],
+  ["doc", xdr.string(xdr.lookup("SC_SPEC_DOC_LIMIT"))],
   ["name", xdr.string(60)],
   ["value", xdr.lookup("Uint32")],
 ]);
@@ -711,7 +711,7 @@ xdr.struct("ScSpecUdtErrorEnumCaseV0", [
 //
 // ===========================================================================
 xdr.struct("ScSpecUdtErrorEnumV0", [
-  ["doc", xdr.string(SC_SPEC_DOC_LIMIT)],
+  ["doc", xdr.string(xdr.lookup("SC_SPEC_DOC_LIMIT"))],
   ["lib", xdr.string(80)],
   ["name", xdr.string(60)],
   ["cases", xdr.varArray(xdr.lookup("ScSpecUdtErrorEnumCaseV0"), 50)],
@@ -728,7 +728,7 @@ xdr.struct("ScSpecUdtErrorEnumV0", [
 //
 // ===========================================================================
 xdr.struct("ScSpecFunctionInputV0", [
-  ["doc", xdr.string(SC_SPEC_DOC_LIMIT)],
+  ["doc", xdr.string(xdr.lookup("SC_SPEC_DOC_LIMIT"))],
   ["name", xdr.string(30)],
   ["type", xdr.lookup("ScSpecTypeDef")],
 ]);
@@ -745,7 +745,7 @@ xdr.struct("ScSpecFunctionInputV0", [
 //
 // ===========================================================================
 xdr.struct("ScSpecFunctionV0", [
-  ["doc", xdr.string(SC_SPEC_DOC_LIMIT)],
+  ["doc", xdr.string(xdr.lookup("SC_SPEC_DOC_LIMIT"))],
   ["name", xdr.lookup("ScSymbol")],
   ["inputs", xdr.varArray(xdr.lookup("ScSpecFunctionInputV0"), 10)],
   ["outputs", xdr.varArray(xdr.lookup("ScSpecTypeDef"), 1)],
@@ -1395,7 +1395,7 @@ xdr.union("ScObject", {
     i64: xdr.lookup("Int64"),
     u128: xdr.lookup("Int128Parts"),
     i128: xdr.lookup("Int128Parts"),
-    bin: xdr.varOpaque(SCVAL_LIMIT),
+    bin: xdr.varOpaque(xdr.lookup("SCVAL_LIMIT")),
     contractCode: xdr.lookup("ScContractCode"),
     address: xdr.lookup("ScAddress"),
     nonceAddress: xdr.lookup("ScAddress"),
@@ -2736,18 +2736,18 @@ xdr.struct("ContractDataEntry", [
 
 // === xdr source ============================================================
 //
-//   struct ContractCodeEntry {
-//       ExtensionPoint ext;
-//   
-//       Hash hash;
-//       opaque code<SCVAL_LIMIT>;
-//   };
+//    struct ContractCodeEntry {
+//        ExtensionPoint ext;
+//
+//        Hash hash;
+//        opaque code<SCVAL_LIMIT>;
+//    };
 //
 // ===========================================================================
 xdr.struct("ContractCodeEntry", [
   ["ext", xdr.lookup("ExtensionPoint")],
   ["hash", xdr.lookup("Hash")],
-  ["code", xdr.varOpaque(SCVAL_LIMIT)],
+  ["code", xdr.varOpaque(xdr.lookup("SCVAL_LIMIT"))],
 ]);
 
 // === xdr source ============================================================
@@ -5786,7 +5786,7 @@ xdr.enum("ContractIdPublicKeyType", {
 //
 // ===========================================================================
 xdr.struct("InstallContractCodeArgs", [
-  ["code", xdr.varOpaque(SCVAL_LIMIT)],
+  ["code", xdr.varOpaque(xdr.lookup("SCVAL_LIMIT"))],
 ]);
 
 // === xdr source ============================================================
