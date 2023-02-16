@@ -1,4 +1,4 @@
-import {base64} from '../../utilities/index.js';
+import {base64} from '../utilities/index.js';
 
 import {Transaction} from './Transaction.js';
 import {Account} from '../Account/index.js';
