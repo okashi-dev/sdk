@@ -7,7 +7,7 @@
 import * as XDR from 'js-xdr';
 import * as buffer from 'buffer';
 
-if (window) {
+if (typeof window !== 'undefined') {
   // Add support for Buffer in browsers.
   window.Buffer = buffer.Buffer;
 }
