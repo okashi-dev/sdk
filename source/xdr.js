@@ -7,7 +7,10 @@
 import * as XDR from 'js-xdr';
 import * as buffer from 'buffer';
 
-window.Buffer = buffer.Buffer;
+if (window) {
+  // Add support for Buffer in browsers.
+  window.Buffer = buffer.Buffer;
+}
 
 
 var types = XDR.config(xdr => {
